@@ -1,0 +1,14 @@
+@using (Html.BeginForm("Download", "Educator", FormMethod.Post))
+{
+  <button type="submit" class="main-btn">
+  indir
+  </button> <br>
+}
+@using (Html.BeginForm("Upload", "Educator", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+  Html.ValidationSummary(true);
+
+  <input type="file" id="myFile" name="dosya" style="display:none;" accept="text/xml"> <br>
+  <label for="myFile" class="main-btn">Dosya Seç</label><br><br>
+  <button type="submit" class="main-btn">Yükle</button>
+}

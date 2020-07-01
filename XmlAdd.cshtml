@@ -1,10 +1,10 @@
-@using (Html.BeginForm("Download", "Educator", FormMethod.Post))
+@using (Html.BeginForm("Download", "ControllerFile", FormMethod.Post))
 {
   <button type="submit" class="main-btn">
   indir
   </button> <br>
 }
-@using (Html.BeginForm("Upload", "Educator", FormMethod.Post, new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm("Upload", "ControllerFile", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
   Html.ValidationSummary(true);
 
